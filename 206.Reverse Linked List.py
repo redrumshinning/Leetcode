@@ -18,7 +18,7 @@ class Solution(object):
             prev = curr
         return prev
 
-    def reverseList2(self, head):
+    def reverseList2(self, head):#从前往后递归
         """
         :type head: ListNode
         :rtype: ListNode
@@ -31,3 +31,13 @@ class Solution(object):
         n = node.next
         node.next = prev
         return self._reverse(n, node)
+
+    def reverseList3(self, head):#从后往前递归，最后一个节点为new_head
+        if not head or not head.next:
+            return head
+
+        new_head = self.reverseList3(head.next)
+        next_node = head.next  # head -> next_node
+        next_node.next = head  # head <- next_node
+        head.next = None  # [x] <- head <- next_node
+        return new_head
