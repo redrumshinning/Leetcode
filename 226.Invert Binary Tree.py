@@ -44,18 +44,20 @@ class Solution(object):
                 stack.extend([node.right, node.left])
         return root
 
-S = Solution()
-a = TreeNode(1)
-b = TreeNode(2)
-c = TreeNode(3)
-d = TreeNode(4)
-e = TreeNode(5)
-f = TreeNode(6)
-g = TreeNode(7)
-a.left = b
-a.right = c
-b.left = d
-b.right = e
-c.left = f
-c.right = g
-S.invertTree(a)
+# S = Solution()
+# a = TreeNode(1)
+# b = TreeNode(2)
+# c = TreeNode(3)
+# d = TreeNode(4)
+# e = TreeNode(5)
+# f = TreeNode(6)
+# g = TreeNode(7)
+# a.left = b
+# a.right = c
+# b.left = d
+# b.right = e
+# c.left = f
+# c.right = g
+# S.invertTree(a)
+
+
