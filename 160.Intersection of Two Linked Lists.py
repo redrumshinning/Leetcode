@@ -27,7 +27,7 @@ class Solution(object):#与141题思想一样，如果有交点，肯定追的�
     def getIntersectionNode2(self, headA, headB):
         p = headA
         q = headB
-        while p is not q:
+        while p != q:
             p = p.next if p  else headB
             q = q.next if q  else headA
         return p
